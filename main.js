@@ -10,6 +10,7 @@ function createMessage (msg, type) {
 function clearHistory() {
     localStorage.setItem('history', '')
     log.innerHTML = localStorage.getItem('history')
+    window.location.replace(window.location.href)
 }
 websocket.onopen = function() {
     log.innerHTML += createMessage('System: WebSocket is open', 'System')
